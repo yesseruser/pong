@@ -1,6 +1,6 @@
 import pygame
 pygame.init()
-
+# bla
 window = pygame.display.set_mode((800, 600))
 
 left_pos = 150
