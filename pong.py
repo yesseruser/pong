@@ -31,6 +31,7 @@ while run:
                     right_speed = 0
 
     left_pos = left_pos + left_speed
+    right_pos = right_pos + right_speed
     if left_pos < 0:
         left_pos = 0
     if left_pos > 450:
