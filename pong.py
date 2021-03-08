@@ -17,13 +17,13 @@ while run:
             run = False
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_w:
-                left_speed = -1
+                left_speed = -5
             elif event.key == pygame.K_s:
-                left_speed = +1
+                left_speed = +5
             elif event.key == pygame.K_UP:
-                right_speed = -1
+                right_speed = -5
             elif event.key == pygame.K_DOWN:
-                right_speed = -1
+                right_speed = +5
         elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_w or event.key == pygame.K_s:
                     left_speed = 0
@@ -43,7 +43,7 @@ while run:
 
     window.fill("black")
     pygame.draw.rect(window, "white", (0, left_pos, 30, 150))
-    pygame.draw.rect(window, "white", (770, right_pos))
+    pygame.draw.rect(window, "white", (770, right_pos, 30, 150))
     pygame.display.flip()
 
     clock.tick(60)
