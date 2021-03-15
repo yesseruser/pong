@@ -10,6 +10,9 @@ left_speed = 0
 right_pos = 255
 right_speed = 0
 
+ball_x = 400
+ball_y = 300
+
 run = True
 while run:
     for event in pygame.event.get():
@@ -39,10 +42,12 @@ while run:
         right_pos = 0
     if right_pos > 450:
         right_pos = 450
-
+    ball_x = ball_x + 5
+    ball_y = ball_y + 5
     window.fill("black")
     pygame.draw.rect(window, "white", (0, left_pos, 30, 150))
     pygame.draw.rect(window, "white", (770, right_pos, 30, 150))
+    pygame.draw.circle(window, "white", (ball_x, ball_y), 15)
     pygame.display.flip()
 
     clock.tick(60)
