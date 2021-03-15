@@ -14,4 +14,4 @@ How to install Pygame:
 How to run: 
 1. Open Command prompt (open start and start typing CMD)
 2. Find the location this project is in using: `cd <folder>`
-3. use this command: `python pong.py` Warning: do not rename the file, or this won't work. You need Python and Pygame installed.
+3. use this command: `python <program file name>` Warning: do not rename the file, or this won't work. You need Python and Pygame installed.
