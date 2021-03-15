@@ -29,7 +29,6 @@ while run:
                     left_speed = 0
                 if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
                     right_speed = 0
-
     left_pos = left_pos + left_speed
     right_pos = right_pos + right_speed
     if left_pos < 0:
