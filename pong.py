@@ -1,8 +1,10 @@
 import pygame
+
 pygame.init()
 
 window = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
+font = pygame.font.SysFont("consolas", 40)
 
 left_pos = 255
 left_speed = 0
@@ -15,6 +17,14 @@ ball_y = 300.0
 ball_dir_x = +5.0
 ball_dir_y = -5.0
 ball_speed = 1.0
+
+
+def game_over():
+    game_over_text = font.render('Game Over', True, (255, 255, 255))
+    window.blit(game_over_text, (400 - game_over_text.get_width()/2, 50))
+    pygame.display.flip()
+    clock.tick(1)
+
 
 run = True
 while run:
@@ -31,10 +41,10 @@ while run:
             elif event.key == pygame.K_DOWN:
                 right_speed = +5
         elif event.type == pygame.KEYUP:
-                if event.key == pygame.K_w or event.key == pygame.K_s:
-                    left_speed = 0
-                if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
-                    right_speed = 0
+            if event.key == pygame.K_w or event.key == pygame.K_s:
+                left_speed = 0
+            if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
+                right_speed = 0
     left_pos = left_pos + left_speed
     right_pos = right_pos + right_speed
     if left_pos < 0:
@@ -48,13 +58,11 @@ while run:
     ball_x = ball_x + ball_dir_x
     ball_y = ball_y + ball_dir_y
     if ball_x <= 15:
-        ball_speed = ball_speed + 0.01
-        ball_dir_x = +5
-        ball_dir_x = ball_dir_x * ball_speed
+        game_over()
+        break
     elif ball_x >= 785:
-        ball_speed = ball_speed + 0.01
-        ball_dir_x = -5
-        ball_dir_x = ball_dir_x * ball_speed
+        game_over()
+        break
     if ball_y <= 15:
         ball_dir_y = +5
     elif ball_y >= 585:
