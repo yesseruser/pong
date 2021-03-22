@@ -10,10 +10,11 @@ left_speed = 0
 right_pos = 255
 right_speed = 0
 
-ball_x = 400
-ball_y = 300
-ball_dir_x = +5
-ball_dir_y = -5
+ball_x = 400.0
+ball_y = 300.0
+ball_dir_x = +5.0
+ball_dir_y = -5.0
+ball_speed_x = 1.0
 
 run = True
 while run:
@@ -47,13 +48,27 @@ while run:
     ball_x = ball_x + ball_dir_x
     ball_y = ball_y + ball_dir_y
     if ball_x <= 15:
+        ball_speed_x = ball_speed_x + 0.1
         ball_dir_x = +5
+        ball_dir_x = ball_dir_x * ball_speed_x
     elif ball_x >= 785:
+        ball_speed_x = ball_speed_x + 0.1
         ball_dir_x = -5
+        ball_dir_x = ball_dir_x * ball_speed_x
     if ball_y <= 15:
         ball_dir_y = +5
     elif ball_y >= 585:
         ball_dir_y = -5
+    if ball_x <= 45:
+        if left_pos < ball_y < left_pos + 150:
+            ball_speed_x = ball_speed_x + 0.1
+            ball_dir_x = +5
+            ball_dir_x = ball_dir_x * ball_speed_x
+    if ball_x >= 755:
+        if right_pos < ball_y < right_pos + 150:
+            ball_speed_x = ball_speed_x + 0.1
+            ball_dir_x = -5
+            ball_dir_x = ball_dir_x * ball_speed_x
     window.fill("black")
     pygame.draw.rect(window, "white", (0, left_pos, 30, 150))
     pygame.draw.rect(window, "white", (770, right_pos, 30, 150))
