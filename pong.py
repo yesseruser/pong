@@ -25,6 +25,7 @@ def game_over():
     pygame.display.flip()
     clock.tick(1)
 
+
 pygame.draw.rect(window, "white", (0, left_pos, 30, 150))
 pygame.draw.rect(window, "white", (770, right_pos, 30, 150))
 pygame.draw.circle(window, "white", (ball_x, ball_y), 15)
