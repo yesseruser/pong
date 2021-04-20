@@ -9,7 +9,8 @@ You also need the Pygame library installed.
 How to install Pygame:  
 1. Open Command prompt (Windows 10: open start and type CMD, then press enter. Mac: Open spotlight and type terminal and press enter.)  
 2. Type in the command prompt: `pip install pygame` (You need the python installed and added to PATH to make this work)
-3. Wait until the installation is complete.  
+3. Wait until the installation is complete.
+**_Don't forget to unzip the file!_**
 
 How to run: 
 1. Open Command prompt (open start and start typing CMD)
