@@ -7,7 +7,7 @@ The point is to bounce the ball to make it not get behind the pad.
 You need Python 3.9 to run this program. link to download: https://www.python.org/downloads/ (Somewhere in the setup there is a "Add to PATH" checkbox. Check it if it is not checked.) 
 You also need the Pygame library installed.  
 How to install Pygame:  
-1. Open Command prompt (open start and start typing CMD)  
+1. Open Command prompt (Windows 10: open start and type CMD, then press enter. Mac: Open spotlight and type terminal and press enter.)  
 2. Type in the command prompt: `pip install pygame` (You need the python installed and added to PATH to make this work)
 3. Wait until the installation is complete.  
 
