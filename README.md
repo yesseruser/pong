@@ -11,8 +11,15 @@ How to install Pygame:
 2. Type in the command prompt: `pip install pygame` (You need the python installed and added to PATH to make this work)
 3. Wait until the installation is complete.  
 **_Don't forget to unzip the file!_**
-
-How to run: 
+#How to run: 
 1. Open Command prompt (open start and start typing CMD)
 2. Find the location this project is in using: `cd <folder>`
 3. use this command: `python <program file name>` Warning: do not rename the file, or this won't work. You need Python and Pygame installed.
+#Contribute:
+This project is open-source, so you can contribute.
+How to contribute:
+1. Login or register to github, if you aren't signed in.
+2. Click that fork button on top of the page.
+3. Make some changes in your fork.
+4. Create a pull request.
+5. Wait for me to approve your pull request.
