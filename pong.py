@@ -46,6 +46,8 @@ while run:
                 right_speed = -5
             elif event.key == pygame.K_DOWN:
                 right_speed = +5
+            elif event.key == pygame.K_ESCAPE:
+                run = False
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_w or event.key == pygame.K_s:
                 left_speed = 0
