@@ -1,9 +1,9 @@
-# pong
+# pong-python
 Pong in Pygame  
 A 2D game for 2 players, where there is a ball bouncing between two pads controlled by players.  
 The point is to bounce the ball to make it not get behind the pad.
 # Important:
-You need Python 3.9 to run this program. link to download: https://www.python.org/downloads/ (Somewhere in the setup there is a "Add to PATH" checkbox. Check it if it is not checked.)
+You need [Python 3.9](https://www.python.org/downloads/) to run this program. Make sure to add Python to PATH.
 You also need the Pygame library installed.  
 # How to install Pygame:  
 1. Open Command prompt (In Win10 open start and start typing CMD)  
